@@ -78,12 +78,12 @@ export interface WeekMeta {
 }
 
 export const WEEKS: WeekMeta[] = [
-  { week: 9, label: '9주차', chapters: ['rest-overview', 'spring-rest'], hasVelog: false, note: 'REST API 개론 · Spring REST 구현' },
-  { week: 10, label: '10주차', chapters: ['unit-test'], hasVelog: false, note: 'Spring REST 단위 테스트' },
-  { week: 11, label: '11주차', chapters: ['boot-overview'], hasVelog: false, note: 'Spring Boot 개요' },
-  { week: 12, label: '12주차', chapters: ['data-jpa'], hasVelog: true, note: 'Spring Data JPA (velog 정리)' },
-  { week: 13, label: '13주차', chapters: ['security'], hasVelog: false, note: 'Spring Boot Security' },
-  { week: 14, label: '14주차', chapters: ['logging'], hasVelog: true, note: 'Logging - SLF4J/Logback (velog 정리)' },
+  { week: 9, label: '9주차', chapters: ['rest-overview', 'spring-rest'], hasVelog: true, note: 'REST API 개론 · Spring REST 구현' },
+  { week: 10, label: '10주차', chapters: ['unit-test'], hasVelog: true, note: 'Spring REST 단위 테스트' },
+  { week: 11, label: '11주차', chapters: ['boot-overview'], hasVelog: true, note: 'Spring Boot 개요' },
+  { week: 12, label: '12주차', chapters: ['data-jpa'], hasVelog: true, note: 'Spring Data JPA' },
+  { week: 13, label: '13주차', chapters: ['security'], hasVelog: true, note: 'Spring Boot Security' },
+  { week: 14, label: '14주차', chapters: ['logging'], hasVelog: true, note: 'Logging - SLF4J/Logback' },
 ]
 
 export const weekByNum = (w: WeekId): WeekMeta => WEEKS.find((x) => x.week === w)!

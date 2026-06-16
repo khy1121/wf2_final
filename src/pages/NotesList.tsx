@@ -46,8 +46,8 @@ export default function NotesList() {
       </div>
 
       <p className="mt-5 px-1 text-xs leading-relaxed text-ink-500">
-        ※ velog에 작성된 12주차(Spring Data JPA), 14주차(Logging) 정리 노트를 그대로 볼 수 있어요. 이미지는
-        탭하면 크게 보입니다.
+        ※ 9~14주차 수업 정리를 모아봤어요. 🎯 표시는 시험 강조 포인트입니다. 이미지는 탭하면 크게 보입니다.
+        (12·14주차는 velog 원본 정리, 9·10·11·13주차는 강의자료 기반 정리)
       </p>
     </div>
   )
