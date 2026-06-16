@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  @apply bg-ink-950 text-ink-100 font-sans antialiased;
+  margin: 0;
+  // iOS 안전 영역 대응 (노치/홈 인디케이터)
+  padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom)
+    env(safe-area-inset-left);
+}
+
+// 데스크탑/모바일 공통 배경 그라데이션
+#root {
+  background:
+    radial-gradient(1200px 600px at 50% -10%, rgba(99, 102, 241, 0.18), transparent 60%),
+    radial-gradient(900px 500px at 100% 0%, rgba(56, 189, 248, 0.1), transparent 55%);
+}
+
+@layer components {
+  .card {
+    @apply rounded-2xl bg-ink-900/70 border border-ink-800 backdrop-blur-sm;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl font-semibold transition
+      active:scale-[0.98] disabled:opacity-50 disabled:pointer-events-none;
+  }
+  .btn-primary {
+    @apply btn bg-brand-500 hover:bg-brand-400 text-white shadow-lg shadow-brand-500/20;
+  }
+  .btn-ghost {
+    @apply btn bg-ink-800/60 hover:bg-ink-800 text-ink-100 border border-ink-700;
+  }
+
+  // 보기 버튼 상태
+  .choice {
+    @apply w-full text-left rounded-xl border px-4 py-3.5 transition flex items-start gap-3
+      border-ink-700 bg-ink-800/40 hover:bg-ink-800 hover:border-ink-600;
+  }
+  .choice-correct {
+    @apply border-emerald-500 bg-emerald-500/15 text-emerald-100;
+  }
+  .choice-wrong {
+    @apply border-rose-500 bg-rose-500/15 text-rose-100;
+  }
+  .choice-muted {
+    @apply opacity-55;
+  }
+
+  .badge {
+    @apply inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-semibold;
+  }
+}
+
+// 스크롤바 (데스크탑 가독성)
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-ink-700 rounded-full;
+}
+::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
+
+// 모바일에서 입력 줌 방지
+input,
+textarea,
+select {
+  font-size: 16px;
+}
