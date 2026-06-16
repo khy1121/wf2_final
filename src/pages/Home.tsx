@@ -76,6 +76,13 @@ export default function Home() {
       <SectionTitle>범위별 학습</SectionTitle>
       <div className="space-y-2.5">
         <ModeCard
+          to="/notes"
+          emoji="📒"
+          title="수업 정리 보기"
+          desc="velog 정리 노트 · 이미지 포함 (12·14주차)"
+          accent="from-teal-500 to-emerald-600"
+        />
+        <ModeCard
           to="/weekly"
           emoji="🗓️"
           title="주차별 시험문제"
