@@ -1,0 +1,14 @@
+node_modules
+dist
+dist-ssr
+dev-dist
+.claude
+*.local
+.DS_Store
+ppt_extract.txt
+.vite
+
+# 빌드 산출물 (tsc -b / vite-plugin-pwa)
+*.tsbuildinfo
+vite.config.js
+vite.config.d.ts
